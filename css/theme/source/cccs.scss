@@ -101,8 +101,14 @@ strong {
     background-size: contain;
   }
   section {
+    p {
+      margin: 0 0 10px 0;
+      line-height: 1.2em;
+    }
     h1,h2,h3,h4,h5,h6 {
       font-weight: bold;
+      line-height: 0.9em;
+      letter-spacing: 0.02em;
     }
     .width30 {
       width: 30%;
