@@ -51,3 +51,10 @@ img.floatright {
   text-shadow: 0px 0px 10px rgba(0,0,0,0.9);
 }
 
+body.print-pdf .reveal .slides .noprint {
+  display: none !important;
+}
+
+body:not(.print-pdf) .reveal .slides .onlyprint {
+  display: none !important;
+}
