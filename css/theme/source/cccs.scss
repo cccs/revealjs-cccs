@@ -129,3 +129,9 @@ strong {
   }
 }
 
+body.print-pdf .reveal {
+  a {
+    background-color: lighten($cccsGruen, 40%);
+  }
+}
+
