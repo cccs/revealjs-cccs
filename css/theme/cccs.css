@@ -1,3 +1,48 @@
+.dropshadow {
+  -webkit-filter: drop-shadow(5px 5px 5px #888);
+  filter: drop-shadow(5px 5px 5px #888); }
+
+body.print-pdf .reveal .slides .noprint {
+  display: none !important; }
+
+body:not(.print-pdf) .reveal .slides .onlyprint {
+  display: none !important; }
+
+img.floatleft {
+  float: left;
+  padding-right: 10px; }
+
+img.floatright {
+  float: right;
+  padding-left: 10px; }
+
+.reveal section .brighten {
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0px 0px 5px 15px rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: 0px 0px 5px 15px rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 5px 15px rgba(255, 255, 255, 0.6); }
+.reveal section .darken {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 5px 15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 5px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 5px 15px rgba(0, 0, 0, 0.6); }
+.reveal section .textglow {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9); }
+.reveal section .textshadow {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); }
+.reveal .slides .textleft {
+  text-align: left; }
+.reveal .slides .footnote {
+  position: absolute;
+  top: 95%;
+  left: 0%;
+  width: 95%;
+  font-size: 70%;
+  text-align: right;
+  padding-left: 20px;
+  padding-right: 25px;
+  background: rgba(255, 255, 255, 0.5); }
+
 @font-face {
   font-family: 'TitilliumText';
   src: url("../../lib/font/titillium-light-webfont.eot");
@@ -313,9 +358,12 @@ strong {
   width: 70%; }
 .reveal section .floatleft {
   float: left; }
-.reveal section img.noframe {
+.reveal section img {
   border: 0;
   box-shadow: none; }
+.reveal section img.framed {
+  border: 1px solid #444;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.44); }
 
 body.print-pdf .reveal a {
   background-color: #e9f2d7; }
