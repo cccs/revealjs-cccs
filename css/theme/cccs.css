@@ -32,6 +32,8 @@ img.floatright {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); }
 .reveal .slides .textleft {
   text-align: left; }
+.reveal .slides .large {
+  font-size: 150%; }
 .reveal .slides .footnote {
   position: absolute;
   top: 95%;
@@ -364,8 +366,16 @@ strong {
 .reveal section img.framed {
   border: 1px solid #444;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.44); }
+.reveal section.dark {
+  color: white; }
+  .reveal section.dark a {
+    color: #229aff; }
+  .reveal section.dark a:hover {
+    color: #0065bb; }
 
 body.print-pdf .reveal a {
   background-color: #e9f2d7; }
+body.print-pdf .reveal section.dark a {
+  background-color: black; }
 
 /*# sourceMappingURL=cccs.css.map */

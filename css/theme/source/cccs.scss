@@ -132,11 +132,24 @@ strong {
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.44);
     }
   }
+  section.dark {
+    color: white;
+
+    a {
+      color: lighten( $cccsBlau, 40% );
+    }
+    a:hover {
+      color: lighten( $cccsBlau, 20% );
+    }
+  }
 }
 
 body.print-pdf .reveal {
   a {
     background-color: lighten($cccsGruen, 40%);
+  }
+  section.dark a {
+    background-color: darken($cccsBlau, 20%);
   }
 }
 
