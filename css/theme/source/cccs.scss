@@ -1,3 +1,4 @@
+@use 'sass:color';
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
@@ -61,7 +62,7 @@ html * {
 
 $backgroundColor: #fff;
 $linkColor: $cccsBlau;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColorHover: color.adjust($linkColor, $lightness: 20%);
 $selectionBackgroundColor: $cccsGruen;
 
 $mainFont: 'TitilliumText', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -136,20 +137,20 @@ strong {
     color: white;
 
     a {
-      color: lighten( $cccsBlau, 40% );
+      color: color.adjust($cccsBlau, $lightness: 40%);
     }
     a:hover {
-      color: lighten( $cccsBlau, 20% );
+      color: color.adjust($cccsBlau, $lightness: 20%);
     }
   }
 }
 
 body.print-pdf .reveal {
   a {
-    background-color: lighten($cccsGruen, 40%);
+    background-color: color.adjust($cccsGruen, $lightness: 40%);
   }
   section.dark a {
-    background-color: darken($cccsBlau, 20%);
+    background-color: color.adjust($cccsBlau, $lightness: -20%);
   }
 }
 
