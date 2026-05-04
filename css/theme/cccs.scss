@@ -1,0 +1,122 @@
+// Default mixins and settings -----------------
+@use 'sass:color';
+@use 'template/mixins' as mixins;
+// ---------------------------------------------
+
+$cccsBlau: #002E55;
+$cccsGruen: #95C03D;
+
+
+@use 'template/settings' with (
+  // Override theme settings (see ../template/settings.scss)
+  $background-color: #fff,
+  $link-color: $cccsBlau,
+  $link-color-hover: color.scale($cccsBlau, $lightness: 24%),
+  $selection-background-color: $cccsGruen,
+
+  $main-font: "'Titillium Web', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  $main-font-size: 36px,
+  $main-color: #000,
+
+  $heading-margin: 0 0 20px 0,
+  $heading-font: "'Titillium Web', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  $heading-color: $cccsGruen,
+  $heading-text-shadow: none
+);
+
+
+// Theme template ------------------------------
+@use 'template/theme';
+// ---------------------------------------------
+
+@use "_addons";
+
+
+// Include theme-specific fonts
+@import url(./fonts/titillium-v19/titillium.css);
+@import url(./fonts/fontawesome-free-7.2.0-web/css/fontawesome.min.css);
+@import url(./fonts/fontawesome-free-7.2.0-web/css/regular.min.css);
+@import url(./fonts/fontawesome-free-7.2.0-web/css/solid.min.css);
+@import url(./fonts/fontawesome-free-7.2.0-web/css/brands.min.css);
+
+
+.reveal-viewport {
+  @media screen {
+    background-image:url(../../img/cccs/bg.png);
+    background-repeat:repeat;
+  }
+}
+
+
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.reveal {
+  @media screen {
+    background-image: url(../../img/cccs/cccsturm.png);
+    background-repeat: no-repeat;
+    background-position: 3% 3%;
+    background-attachment: fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+  section {
+    p {
+      margin: 0 0 10px 0;
+      line-height: 1.2em;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      font-weight: bold;
+      line-height: 0.9em;
+      letter-spacing: 0.02em;
+    }
+    .width30 {
+      width: 30%;
+    }
+    .width50 {
+      width: 50%;
+    }
+    .width70 {
+      width: 70%;
+    }
+    .floatleft {
+      float: left;
+    }
+    img {
+      border: 0;
+      box-shadow: none;
+    }
+    img.framed {
+      border: 1px solid #444;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.44);
+    }
+  }
+  section.dark {
+    color: white;
+
+    a {
+      color: color.scale($cccsBlau, $lightness: 48%);
+    }
+    a:hover {
+      color:  color.scale($cccsBlau, $lightness: 24%);
+    }
+  }
+}
+
+body.print-pdf .reveal {
+  a {
+    background-color: color.scale($cccsGruen, $lightness: 48%);
+  }
+  section.dark a {
+    background-color: color.scale($cccsBlau, $lightness: -100%);
+  }
+}
+
